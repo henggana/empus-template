@@ -105,7 +105,7 @@
                     <!-- end of row -->
                 </div>                
             </div>
-            <form>
+            <form action="" method="" data-abide>
               <div class="row">
                 <div class="small-12 columns">
 
@@ -114,8 +114,11 @@
                             <label for="name" class="right">Instansi</label>
                         </div>
                         <div class="small-9 columns">
-                            <input type="radio" name="jenis" value="1"> Opini
-                            <input type="radio" name="jenis" value="1"> Pengaduan
+                            <div class="jenis-field">
+                                <input type="radio" name="jenis" value="1" required> Opini
+                                <input type="radio" name="jenis" value="1" required> Pengaduan
+                                <small class="error">Jenis harus dipilih</small>
+                            </div>
                         </div>
                     </div><!-- end of row -->
 
@@ -159,7 +162,10 @@
                             <label for="name" class="right inline">Judul</label>
                         </div>
                         <div class="small-9 columns">
-                          <input type="text" name="name" placeholder="nama">
+                            <div class="name-field">  
+                                <input type="text" name="name" placeholder="nama" required>
+                                <small class="error">Nama harus diisi</small>
+                            </div>
                         </div>
                     </div><!-- end of row -->
 
@@ -168,7 +174,10 @@
                           <label for="name" class="right inline">Isi</label>
                         </div>
                         <div class="small-9 columns">
-                          <textarea id="name" placeholder="deskripsi" rows="5"></textarea>
+                            <div class="description-field">
+                                <textarea name="description" placeholder="deskripsi" rows="5" required></textarea>
+                                <small class="error">Isi harus diisi</small>
+                            </div>
                         </div>
                     </div><!-- end of row -->
 
@@ -189,12 +198,13 @@
         
     <!-- </div> -->
 
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/vendor/fastclick.js"></script>
-    <script src="js/vendor/iscroll.js"></script>
-    <script src="js/vendor/snap.js"></script>
-    <script src="js/foundation.min.js"></script>
-    <script src="js/foundation/foundation.offcanvas.js"></script>
+    <script src="../../js/vendor/jquery.js"></script>
+    <script src="../../js/vendor/fastclick.js"></script>
+    <script src="../../js/vendor/iscroll.js"></script>
+    <script src="../../js/vendor/snap.js"></script>
+    <script src="../../js/foundation.min.js"></script>
+    <script src="../../js/foundation/foundation.abide.js"></script>
+    <script src="../../js/foundation/foundation.offcanvas.js"></script>
     <script>
         $(document).foundation();
         window.addEventListener('load', function() {
@@ -210,6 +220,6 @@
             disable: 'right'
         });
     </script>
-    <script src="js/main.js"></script>
+    <script src="../../js/main.js"></script>
 </body>
 </html>
