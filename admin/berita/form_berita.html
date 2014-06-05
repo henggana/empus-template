@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="../../vendor/fontawesome/css/font-awesome.min.css" />
     <link rel="stylesheet" href="../../css/admin/main.css" />
     <link rel="stylesheet" href="../../css/responsive.css" />
+    <link rel="stylesheet" href="../../js/vendor/select2/select2.css">
+    <!-- <link rel="stylesheet" href="../../css/select2-foundation5.css.css"> -->
     <script src="../../js/vendor/jquery.js"></script>
     <script src="../../js/vendor/modernizr.js"></script>
     <script src="../../js/foundation/foundation.js"></script>
@@ -114,7 +116,7 @@
                             <label for="name" class="right inline">Instansi</label>
                         </div>
                         <div class="small-9 columns">
-                            <select multiple type="text" name="name" placeholder="nama" style="height:auto">
+                            <select multiple="multiple" id="instansi" name="name" placeholder="nama" style="height:auto;width:100%">
                                 <option value="">Kelurahan Sindangsari</option>
                                 <option value="">Kelurahan Baranangsiang</option>
                                 <option value="">Kelurahan Katulampa</option>
@@ -131,7 +133,7 @@
                             <label for="name" class="right inline">Pelayanan</label>
                         </div>
                         <div class="small-9 columns">
-                            <select type="text" name="name" placeholder="nama" style="height:auto">
+                            <select name="name" placeholder="nama" style="height:auto">
                                 <option value="">- pilih -</option>
                                 <option value="">Kelurahan Sindangsari</option>
                                 <option value="">Kelurahan Baranangsiang</option>
@@ -199,6 +201,7 @@
     <script src="../../js/vendor/fastclick.js"></script>
     <script src="../../js/vendor/iscroll.js"></script>
     <script src="../../js/vendor/snap.js"></script>
+    <script src="../../js/vendor/select2/select2.js"></script>
     <script src="../../js/foundation.min.js"></script>
     <script src="../../js/foundation/foundation.abide.js"></script>
     <script src="../../js/foundation/foundation.offcanvas.js"></script>
@@ -215,6 +218,12 @@
             element: document.getElementById('content'),
             touchToDrag: false,
             disable: 'right'
+        });
+
+        $(document).ready(function(){
+            $("#instansi").select2({
+                multiple:true
+            });
         });
     </script>
     <script src="../../js/main.js"></script>
