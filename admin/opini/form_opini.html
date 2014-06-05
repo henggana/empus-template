@@ -80,70 +80,111 @@
             </nav>
         </div>       
         
-        <section id="content" class="main-content snap-content">
+        <section id="content" class="main-content snap-content frm-ins">
             <div class="row">
                 <div class="small-12 medium-12 columns grid-control">
                     <ul class="breadcrumbs">
                       <li><a href="#">Admin</a></li>
-                      <li class="current"><a href="#">Instansi</a></li>
+                      <li><a href="#">Berita</a></li>
+                      <li class="current"><a href="#">create</a></li>
                       <!-- <li class="unavailable"><a href="#">Gene Splicing</a></li>
                       <li class="current"><a href="#">Cloning</a></li> -->
                     </ul>
                 </div>
             </div>
-                    
+
             <div class="row">
-                <div class="small-12 medium-6 columns grid-control">
-                    <a href="form_instansi.html" class="button primary small">Create</a>
-                </div>
-                <div class="small-12 medium-6 columns">
-                    <form>
-                        <div class="small-6 medium-5 right">
-                            <input type="text" name="search" placeholder="search">
-                        </div>   
-                    </form>
-                </div>
+                <div class="small-12">
+                    <div class="row">
+                        <div class="small-3 columns">
+                        </div>
+                        <div class="small-9 columns">
+                          <!-- <h2>Instansi</h2> -->
+                        </div>
+                    </div>
+                    <!-- end of row -->
+                </div>                
             </div>
-            <div class="row">
-                <div class="small-12 medium-12 columns">
-                    <table class="grid">
-                        <thead>
-                            <tr>
-                                <th>Id</th>
-                                <th>Nama Instansi</th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td><a href="">Kelurahan Cibinong</a></td>
-                                <td class="grid-buttons"><a href="" title="delete" class="delbutton"><i class="fa fa-times"></i></a></td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td><a href="">Kelurahan Sindangsari</a></td>
-                                <td class="grid-buttons"><a href="" title="delete" class="delbutton"><i class="fa fa-times"></i></a></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div><!-- end of col -->
-            </div><!-- end of row -->
-            <div class="row">
-                <div class="small-12 medium-6 medium-centered columns">
-                    <ul class="pagination">
-                      <li class="arrow unavailable"><a href="">&laquo;</a></li>
-                      <li class="current"><a href="">1</a></li>
-                      <li><a href="">2</a></li>
-                      <li><a href="">3</a></li>
-                      <li><a href="">4</a></li>
-                      <li class="unavailable"><a href="">&hellip;</a></li>
-                      <li><a href="">12</a></li>
-                      <li><a href="">13</a></li>
-                      <li class="arrow"><a href="">&raquo;</a></li>
-                    </ul>
-                </div><!-- end of col -->
-            </div><!-- end of row -->
+            <form>
+              <div class="row">
+                <div class="small-12 columns">
+
+                    <div class="row">
+                        <div class="small-3 columns">
+                            <label for="name" class="right">Instansi</label>
+                        </div>
+                        <div class="small-9 columns">
+                            <input type="radio" name="jenis" value="1"> Opini
+                            <input type="radio" name="jenis" value="1"> Pengaduan
+                        </div>
+                    </div><!-- end of row -->
+
+                    <div class="row">
+                        <div class="small-3 columns">
+                            <label for="name" class="right inline">Instansi</label>
+                        </div>
+                        <div class="small-9 columns">
+                            <select type="text" name="name" placeholder="nama" style="height:auto">
+                                <option value="">Kelurahan Sindangsari</option>
+                                <option value="">Kelurahan Baranangsiang</option>
+                                <option value="">Kelurahan Katulampa</option>
+                                <option value="">Kelurahan Sindangrasa</option>
+                                <option value="">Kelurahan Sindangsari</option>
+                                <option value="">Kelurahan Tajur</option>
+                                <option value="">Kelurahan Sukasari</option>
+                            </select>
+                        </div>
+                    </div><!-- end of row -->
+
+                    <div class="row">
+                        <div class="small-3 columns">
+                            <label for="name" class="right inline">Pelayanan</label>
+                        </div>
+                        <div class="small-9 columns">
+                            <select type="text" name="name" placeholder="nama" style="height:auto">
+                                <option value="">- pilih -</option>
+                                <option value="">Kelurahan Sindangsari</option>
+                                <option value="">Kelurahan Baranangsiang</option>
+                                <option value="">Kelurahan Katulampa</option>
+                                <option value="">Kelurahan Sindangrasa</option>
+                                <option value="">Kelurahan Sindangsari</option>
+                                <option value="">Kelurahan Tajur</option>
+                                <option value="">Kelurahan Sukasari</option>
+                            </select>
+                        </div>
+                    </div><!-- end of row -->
+
+                    <div class="row">
+                        <div class="small-3 columns">
+                            <label for="name" class="right inline">Judul</label>
+                        </div>
+                        <div class="small-9 columns">
+                          <input type="text" name="name" placeholder="nama">
+                        </div>
+                    </div><!-- end of row -->
+
+                    <div class="row">
+                        <div class="small-3 columns">
+                          <label for="name" class="right inline">Isi</label>
+                        </div>
+                        <div class="small-9 columns">
+                          <textarea id="name" placeholder="deskripsi" rows="5"></textarea>
+                        </div>
+                    </div><!-- end of row -->
+
+                  <div class="row">
+                    <div class="small-3 columns">
+                    </div>
+                    <div class="small-9 columns">
+                      <input type="submit" id="submit" value="Save" class="button primary small">
+                      <a href="" class="button secondary small">Cancel</a>
+                    </div>
+                  </div><!-- end of row -->
+
+                  <div class="row">
+                </div>
+              </div>
+          </form>
         </section>  
         
     <!-- </div> -->
